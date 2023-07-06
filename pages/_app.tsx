@@ -2,7 +2,6 @@ import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Mumbai } from "@thirdweb-dev/chains";
 import { ChakraProvider } from "@chakra-ui/react";
-import NavBar from "../components/NavBar";
 import { Orbitron } from "next/font/google";
 
 // This is the chain your dApp will work on.
