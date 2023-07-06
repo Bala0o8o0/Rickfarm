@@ -1,0 +1,45 @@
+html,
+body {
+  background: #0f1318;
+  padding: 0;
+  margin: 0;
+
+}
+
+.bgg {
+  background: #0f1318;
+  color: #7dd3fc;
+}
+
+a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+/* body {
+  
+} */
+
+.equipcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.unequipbutton {
+  height: 20px !important;
+  padding: 5px !important;
+}
