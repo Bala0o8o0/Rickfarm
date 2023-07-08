@@ -135,7 +135,7 @@ const Home: NextPage = () => {
 
   return (
     <Box
-      backgroundImage="url('/alienbg.webp')"
+      backgroundImage="url('/bg2.gif')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
