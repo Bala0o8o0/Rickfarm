@@ -122,7 +122,7 @@ const Home: NextPage = () => {
         left={0}
         width="100vw"
         height="100vh"
-        backgroundImage="url('/bg2.gif')"
+        backgroundImage="url('/alienbg.webp')"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
