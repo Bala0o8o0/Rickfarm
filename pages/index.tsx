@@ -33,6 +33,7 @@ import {
   Image
 } from "@chakra-ui/react";
 
+<<<<<<< HEAD
 import { Orbitron, Press_Start_2P  } from "next/font/google";
 
 
@@ -46,6 +47,10 @@ const pixel =Orbitron ({
   weight: ['900'],
 });
 
+=======
+
+
+>>>>>>> 75b2bd91584df0bd6c9c9789e7727c507ac37e2c
 
 const Home: NextPage = () => {
   const address = useAddress();
@@ -164,7 +169,11 @@ const Home: NextPage = () => {
         left={0}
         width="100vw"
         height="100vh"
+<<<<<<< HEAD
         backgroundImage="url('https://images4.alphacoders.com/133/1335396.png')"
+=======
+        backgroundImage="url('/alienbg.webp')"
+>>>>>>> 75b2bd91584df0bd6c9c9789e7727c507ac37e2c
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
