@@ -6,15 +6,13 @@ import {
 } from "@thirdweb-dev/react";
 import { FARMER_ADDRESS } from "../const/addresses";
 import { Box, Container, Divider, Flex, Heading, Text } from "@chakra-ui/react";
-import toast, { Toaster } from 'react-hot-toast';
-import { useEffect  } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
 import React from "react";
-
 
 export function ClaimFarmer() {
   const { contract } = useContract(FARMER_ADDRESS);
   const { data: metadata } = useContractMetadata(contract);
-
 
   React.useEffect(() => {
     toast(
@@ -22,18 +20,14 @@ export function ClaimFarmer() {
       {
         duration: 7000,
         style: {
-          borderRadius: '10px',
-          background: '#eadb73',
+          borderRadius: "10px",
+          background: "#eadb73",
           color: "black",
-          border: '5px solid orange',
+          border: "5px solid orange",
         },
-      },
-      
-      
+      }
     );
-  }, [0]);
-
-
+  }, []);
 
   return (
     <Container>
@@ -50,7 +44,6 @@ export function ClaimFarmer() {
           borderRadius={"md"}
           p={"4"}
           textColor={"#eadb73"}
-          
           textAlign={"center"}
           fontSize={{ base: "20px", md: "30px" }}
           fontWeight={"bold"}
@@ -84,9 +77,6 @@ export function ClaimFarmer() {
         >
           Claim Farmer
         </Web3Button>
-
-
-        
       </Flex>
 
       {/* <Text
@@ -112,10 +102,7 @@ export function ClaimFarmer() {
           </h1>
         </Box>
       </Text> */}
- <Toaster
-  position="bottom-left"
-  reverseOrder={false}
-/>
+      <Toaster position="bottom-left" reverseOrder={false} />
 
       <Text
         color={"whiteAlpha.500"}
