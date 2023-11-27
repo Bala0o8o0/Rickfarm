@@ -32,6 +32,9 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
+
+
+
 const Home: NextPage = () => {
   const address = useAddress();
 
