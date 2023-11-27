@@ -22,7 +22,7 @@ export default function Shop() {
 
   return (
     <Box
-      backgroundImage="url('/bg2.gif')"
+      backgroundImage="url('https://cdn.dribbble.com/users/2350550/screenshots/10856228/ezgif.com-optimize.gif')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"

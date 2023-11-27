@@ -6,10 +6,34 @@ import {
 } from "@thirdweb-dev/react";
 import { FARMER_ADDRESS } from "../const/addresses";
 import { Box, Container, Divider, Flex, Heading, Text } from "@chakra-ui/react";
+import toast, { Toaster } from 'react-hot-toast';
+import { useEffect  } from "react";
+import React from "react";
+
 
 export function ClaimFarmer() {
   const { contract } = useContract(FARMER_ADDRESS);
   const { data: metadata } = useContractMetadata(contract);
+
+
+  React.useEffect(() => {
+    toast(
+      " 🕹️ Rick is trapped in Dimension 111, help him to boost his computer power to escape the dimension.\n\n 🫧Use the Portal Miner to generate power for the computer and help Rick to exit the dimension.",
+      {
+        duration: 7000,
+        style: {
+          borderRadius: '10px',
+          background: '#eadb73',
+          color: "black",
+          border: '5px solid orange',
+        },
+      },
+      
+      
+    );
+  }, [0]);
+
+
 
   return (
     <Container>
@@ -25,7 +49,8 @@ export function ClaimFarmer() {
           backdropBlur="xl"
           borderRadius={"md"}
           p={"4"}
-          textColor={"green"}
+          textColor={"#eadb73"}
+          
           textAlign={"center"}
           fontSize={{ base: "20px", md: "30px" }}
           fontWeight={"bold"}
@@ -38,9 +63,9 @@ export function ClaimFarmer() {
           overflow={"hidden"}
           my={10}
           backdropFilter="blur(30px)"
-          boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
+          boxShadow="60 8px 32px 10 rgba(31, 38, 135, 0.37)"
           backdropBlur="xl"
-          border={"4px solid green"}
+          border={"4px solid #eadb73"}
         >
           <MediaRenderer src={metadata?.image} height="300px" width="300px" />
         </Box>
@@ -51,7 +76,7 @@ export function ClaimFarmer() {
           style={{
             backgroundColor: "black",
             backdropFilter: "blur(20px)",
-            color: "green",
+            color: "#eadb73",
             fontSize: "20px",
             alignItems: "center",
             marginBottom: "60px",
@@ -59,16 +84,19 @@ export function ClaimFarmer() {
         >
           Claim Farmer
         </Web3Button>
+
+
+        
       </Flex>
 
-      <Text
-        backdropFilter="blur(30px)"
+      {/* <Text
+        backdropFilter="blur(80px)"
         boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
         backdropBlur="xl"
         borderRadius={"lg"}
         p={"5"}
         // textColor={"purple.300"}
-        textColor={"green"}
+        textColor={"#d56419"}
         textAlign={"center"}
         fontSize={"17px"}
         fontWeight={"black"}
@@ -83,7 +111,12 @@ export function ClaimFarmer() {
             help Rick to exit the dimension.
           </h1>
         </Box>
-      </Text>
+      </Text> */}
+ <Toaster
+  position="bottom-left"
+  reverseOrder={false}
+/>
+
       <Text
         color={"whiteAlpha.500"}
         fontSize={{ base: "10px", md: "15px" }}

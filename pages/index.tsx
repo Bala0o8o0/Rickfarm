@@ -30,7 +30,22 @@ import {
   Spinner,
   Skeleton,
   Divider,
+  Image
 } from "@chakra-ui/react";
+
+import { Orbitron, Press_Start_2P  } from "next/font/google";
+
+
+const cyber = Orbitron({
+  subsets: ['latin'],
+  weight: ['900'],
+});
+
+const pixel =Orbitron ({
+  subsets: ['latin'],
+  weight: ['900'],
+});
+
 
 const Home: NextPage = () => {
   const address = useAddress();
@@ -61,6 +76,7 @@ const Home: NextPage = () => {
 
   if (!address) {
     return (
+      <div className={`${cyber.className} overflow-hidden  `} > 
       <Container
         maxW={"1200px"}
         backgroundImage="url('/alienbg.webp')"
@@ -70,13 +86,22 @@ const Home: NextPage = () => {
         minHeight="100vh"
         minWidth="100vw"
       >
+        <Box
+    as="div"
+    position="absolute"
+    top={0}
+    left={0}
+    width="100%"
+    height="100%"
+    backgroundColor="rgba(0, 0, 0, 0.5)" 
+  />
         <Flex
           direction={"column"}
           h={"100vh"}
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Text
+          {/* <Text
             my={"40px"}
             backdropFilter="blur(30px)"
             boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
@@ -89,19 +114,35 @@ const Home: NextPage = () => {
             fontWeight={"bold"}
           >
             Welcome to Rick Farm
-          </Text>
+          </Text> */}
+
+          <Image    
+          backdropFilter="blur(0px)"
+          my={"30px"}
+          p={"1"}
+          borderRadius={"60px"}
+          // boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
+          // backdropBlur="xl"  
+          src="https://preview.fontget.com/tmp/6561e3142d42c.png"  />
+
+
+
           <ConnectWallet
             style={{
-              backgroundColor: "rgba(255, 355, 255, 0.25)",
+              backgroundColor: "#346cb1",
               backdropFilter: "blur(20px)",
-              color: "solid black",
+              color: " white",
               fontSize: "20px",
               alignItems: "center",
               margin: "15px",
+              boxShadow:"0 8px 32px 0 rgba(31, 38, 135, 0.37)"
             }}
+            btnTitle="ENTER🦠FARM"
           />
+
         </Flex>
       </Container>
+      </div>
     );
   }
 
@@ -114,28 +155,42 @@ const Home: NextPage = () => {
       </Container>
     );
   }
-
+//----------------CLAIM FARMER
   if (ownedFarmers?.length === 0) {
     return (
+      <div className={`${cyber.className} overflow-hidden  `} > 
       <Box
         top={0}
         left={0}
         width="100vw"
         height="100vh"
-        backgroundImage="url('/bg2.gif')"
+        backgroundImage="url('https://images4.alphacoders.com/133/1335396.png')"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         overflow="auto"
+       
       >
+        <Box
+    as="div"
+    position="absolute"
+    top={0}
+    left={0}
+    width="100%"
+    height="100%"
+    backgroundColor="rgba(0, 0, 0, 0.3)" 
+  />
         <ClaimFarmer />
       </Box>
+      </div>
     );
   }
 
   return (
+    <div className={`${pixel.className}  `} > 
     <Box
-      backgroundImage="url('/bg2.gif')"
+      // backgroundImage="url('https://i.pinimg.com/originals/f8/46/ff/f846ff732d55b7ac19d34009ab4a3606.gif')"
+      backgroundImage="url('https://wallpapercave.com/wp/wp4518902.jpg')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
@@ -145,6 +200,15 @@ const Home: NextPage = () => {
       p={4}
       py={4}
     >
+        <Box
+    as="div"
+    position="absolute"
+    top={0}
+    left={0}
+    width="100%"
+    height="100%"
+    backgroundColor="rgba(0, 0, 0, 0.5)" 
+  />
       <Box
         backdropFilter="blur(30px)"
         backgroundColor="rgba(255, 255, 255, 0.25)"
@@ -265,6 +329,7 @@ const Home: NextPage = () => {
         @ Rick ⛏️ Farm. All Rights reserved 2023{" "}
       </Text>
     </Box>
+    </div>
   );
 };
 
