@@ -77,12 +77,9 @@ const Home: NextPage = () => {
       <div className={`${cyber.className}   `}>
         <Container
           maxW={"1200px"}
-<<<<<<< HEAD
           // backgroundImage="url('/alienbg.webp')"
           backgroundImage="url('https://cdn.dribbble.com/users/2350550/screenshots/10856228/ezgif.com-optimize.gif')"
-=======
           backgroundImage="url('https://raw.githubusercontent.com/Bala0o8o0/Rickfarm/main/public/alienbg.webp')"
->>>>>>> 836486f0c899378b835d34bb84cfd83ee036fda8
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
