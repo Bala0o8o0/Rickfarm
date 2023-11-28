@@ -14,6 +14,12 @@ import {
 } from "@chakra-ui/react";
 import NFT from "../components/NFT";
 import NavBar from "../components/NavBar";
+import { Orbitron, Press_Start_2P } from "next/font/google";
+
+const cyber = Orbitron({
+  subsets: ["latin"],
+  weight: ["900"],
+});
 
 export default function Shop() {
   const { contract } = useContract(TOOLS_ADDRESS);
@@ -21,8 +27,10 @@ export default function Shop() {
   console.log(nfts);
 
   return (
+    <div className={`${cyber.className} overflow-hidden`}>
     <Box
-      backgroundImage="url('https://cdn.dribbble.com/users/2350550/screenshots/10856228/ezgif.com-optimize.gif')"
+      // backgroundImage="url('https://cdn.dribbble.com/users/2350550/screenshots/10856228/ezgif.com-optimize.gif')"
+      backgroundImage="url('/alienbg.webp')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
@@ -117,5 +125,6 @@ export default function Shop() {
         </Text>
       </Container>
     </Box>
+    </div>
   );
 }

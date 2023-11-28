@@ -74,10 +74,11 @@ const Home: NextPage = () => {
 
   if (!address) {
     return (
-      <div className={`${cyber.className} overflow-hidden  `}>
+      <div className={`${cyber.className}   `}>
         <Container
           maxW={"1200px"}
-          backgroundImage="url('/alienbg.webp')"
+          // backgroundImage="url('/alienbg.webp')"
+          backgroundImage="url('https://cdn.dribbble.com/users/2350550/screenshots/10856228/ezgif.com-optimize.gif')"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
@@ -121,7 +122,7 @@ const Home: NextPage = () => {
               borderRadius={"60px"}
               // boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
               // backdropBlur="xl"
-              src="https://preview.fontget.com/tmp/6561e3142d42c.png"
+              src="/Welcome_Text.png"
             />
 
             <ConnectWallet
