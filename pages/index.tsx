@@ -79,7 +79,6 @@ const Home: NextPage = () => {
           maxW={"1200px"}
           // backgroundImage="url('/alienbg.webp')"
           backgroundImage="url('https://cdn.dribbble.com/users/2350550/screenshots/10856228/ezgif.com-optimize.gif')"
-         // backgroundImage="url('https://raw.githubusercontent.com/Bala0o8o0/Rickfarm/main/public/alienbg.webp')"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
