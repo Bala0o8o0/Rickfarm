@@ -77,7 +77,7 @@ const Home: NextPage = () => {
       <div className={`${cyber.className} overflow-hidden  `}>
         <Container
           maxW={"1200px"}
-          backgroundImage="url('/alienbg.webp')"
+          backgroundImage="url('https://raw.githubusercontent.com/Bala0o8o0/Rickfarm/main/public/alienbg.webp')"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
